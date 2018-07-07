@@ -18,3 +18,9 @@ lessc --clean-css css/app.less build/app.css
 
 # copy static files
 cp -r static/* build/
+
+#transfer to Bolt
+scp -r build/* ajaha004@bolt.cs.ucr.edu:public_html/
+
+#delete build
+rm -rf build
