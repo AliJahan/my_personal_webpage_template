@@ -1,0 +1,27 @@
+@import 'colors';
+
+
+#header {
+  font-family: 'Montserrat', sans-serif;
+
+  h1 {
+    padding-bottom: 0.67em;
+    border-bottom: 2px solid @border-gray;
+    margin-bottom: 0;
+
+    font-weight: 400;
+    text-align: center;
+
+    a {
+      text-decoration: none;
+      color: @text-black;
+
+      letter-spacing: 6px;
+      transition: 150ms;
+
+      &:hover {
+        letter-spacing: 7px;
+      }
+    }
+  }
+}

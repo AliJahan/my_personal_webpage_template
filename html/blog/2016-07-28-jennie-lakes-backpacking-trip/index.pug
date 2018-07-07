@@ -1,0 +1,17 @@
+extends /html/_templates/_layouts/blog-post.pug
+
+
+block postData
+  - postTitle = 'Jennie Lakes Backpacking Trip'
+  - postDate = 'July 28, 2015'
+
+
+block post
+  p This weekend I went on a 4-day backpacking trip in Jennie Lakes Wilderness with Kelly.  Since permits in the Sequoia/Kings Canyon area are a nightmare to secure at the last minute, we decided to play it safe and plan our trip in the wilderness area (no permits required).  It was a hot and dusty trip, but our day hike on the third day was a tantalizing introduction to the high Sierras.  I will #[strong definitely] be going back!
+
+  p
+    | Photo album is #[a(href="https://goo.gl/photos/k72FeCoDqnMtjV8B6") here].
+    br
+    | Trip map is #[a(href="https://caltopo.com/m/9UTN") here].
+
+  include:marked ./trail-log.md

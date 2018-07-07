@@ -1,0 +1,49 @@
+@import 'global';
+@import 'colors';
+
+
+#footer {
+  border-top: 2px solid @border-gray;
+  margin-top: 30px;
+  padding-top: 10px;
+
+  .xs({
+    margin-top: 10px;
+  });
+
+  p {
+    margin: 0 0 7px;
+  }
+
+  .icon {
+    display: inline-block;
+    fill: @link;
+    height: 18px;
+    width: 24px;
+
+    &:hover {
+      fill: @link-hover;
+    }
+  }
+
+  .left {
+    font-size: 18px;
+
+    a {
+      margin-right: 8px;
+      text-decoration: none;
+    }
+
+    .ss-mail:before, .ss-octocat:before {
+      vertical-align: middle;
+    }
+  }
+
+  .middle {
+    text-align: center;
+  }
+
+  .right {
+    text-align: right;
+  }
+}

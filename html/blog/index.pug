@@ -1,0 +1,88 @@
+extends ../_templates/_layouts/default.pug
+
+
+block vars
+  - title = 'Scott Hardy · Blog'
+  - navPage = 'blog'
+
+
+block content
+  -
+    var posts = [
+      {
+        title: 'Jennie Lakes Backpacking Trip',
+        path: '2016-07-28-jennie-lakes-backpacking-trip',
+        date: 'July 28, 2016',
+        tldr: "Trip log from a 4-day backpacking trip in the Jennie Lakes Wilderness."
+      },
+      {
+        title: 'Trinity Alps Backpacking Trip',
+        path: '2016-07-08-trinity-alps-backpacking-trip',
+        date: 'July 8, 2016',
+        tldr: "Trip log from a 4-day backpacking trip in the Canyon Creek area of Trinity Alps Wilderness."
+      },
+      {
+        title: 'Hessie Loop Backpacking Trip',
+        path: '2016-06-05-hessie-loop-backpacking-trip',
+        date: 'June 5, 2016',
+        tldr: "Trip log from a 3-day backpacking trip in the Indian Peaks Wilderness."
+      },
+      {
+        title: 'Soundcasts',
+        path: '2016-04-05-soundcasts',
+        date: 'April 5, 2016',
+        tldr: "Made a website with Ryan and Matt that turns SoundCloud profiles into podcasts."
+      },
+      {
+        title: 'My Coke Bot',
+        path: '2016-01-16-my-coke-bot',
+        date: 'January 16, 2016',
+        tldr: "Made a web service that will enter My Coke Rewards codes sent via text message."
+      },
+      {
+        title: '3d Printed Custom Toilet Paper Holder',
+        path: '2015-11-12-toilet-paper-holder',
+        date: 'November 12, 2015',
+        tldr: "Toilet paper holder was too small for Costco-sized rolls.  Designed and printed a custom TP holder that makes it work."
+      },
+      {
+        title: 'The Great Car Experiment of 2015 is Over',
+        path: '2015-10-19-the-great-car-experiment-of-2015-is-over',
+        date: 'October 19, 2015',
+        tldr: "Living in the Subaru was great and easier than expected.  eBay perks definitely helped.  10/10 would/will do again."
+      },
+      {
+        title: 'Living in my Car',
+        path: '2015-08-30-living-in-my-car',
+        date: 'August 30, 2015',
+        tldr: "Starting September 1st, I'll be living out of my car.  Random thoughts and rudimentary planning within."
+      },
+      {
+        title: 'Big Sur Backpacking Trip',
+        path: '2015-02-17-big-sur-backpacking-trip',
+        date: 'February 17, 2015',
+        tldr: "Trip log from a 4-day backpacking trip with Matt, Ryan, and Vanessa in the Big Sur area."
+      },
+      {
+        title: 'The Colorado Trail',
+        path: '2014-08-25-the-colorado-trail',
+        date: 'August 25, 2014',
+        tldr: "I just finished an 8-day 104-mile backpacking trip from Denver to Breckenridge on The Colorado Trail (the whole thing is 500 miles to Durango).  This is my trip log."
+      },
+      {
+        title: 'First Post',
+        path: '2014-06-22-first-post',
+        date: 'June 22, 2014',
+        tldr: "My first blog post, mostly for testing purposes.  Nature and content of blog TBD."
+      }
+    ];
+
+  #blog
+    h1 Blog
+
+    each post in posts
+      .post
+        h2
+          a(href='/blog/' + post.path)= post.title
+          small= post.date
+        p!= post.tldr

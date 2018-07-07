@@ -1,0 +1,37 @@
+
+"""
+Just over a month ago, I committed to try a new way of eating:
+
+> I will not eat inhumanely farmed meat.
+
+
+I define "inhumanely farmed" as the animals are subjected to undue suffering during their lives and/or deaths.
+
+This has been somewhat of a long time coming.  I took an environmental ethics class at Santa Clara, have seen a couple documentaries about the American food industry, and have a couple of close friends who are vegan.  For a long time, I've known the relevant facts surrounding meat consumption, but I never <strong>really thought</strong> about how it applied to myself.
+
+Here's what I considered:
+
+* Most meat at grocery stores and in restaurants is inhumanely farmed
+
+* Purchasing inhumanely farmed products directly supports these unethical practices
+
+* Inhumanely farmed meat consumption is not necessary for the human body to survive and thrive
+
+
+
+Given these facts, the conclusion is obvious; it is unethical to eat inhumanely farmed meat, a conclusion only strengthened by these additional convenience factors:
+
+* I already rarely cook with meat at home
+* Almost every restaurant has options 
+
+
+When I told my good friend Ryan Tsao about this, he immediately asked:
+
+1. What constitutes "humanely farmed meat"?
+  * Wild-caught fish
+  * Free range chicken
+  * Grass-fed ranch cattle
+  * Or more generally: any animal that lives a good life and dies a clean death
+
+2. What about other inhumanely farmed animal products?
+  * Eggs and dairy mostly

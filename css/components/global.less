@@ -1,0 +1,32 @@
+@screen-sm-min: 768px;
+@screen-md-min: 992px;
+@screen-lg-min: 1200px;
+
+.xs(@rules) {
+  @media (max-width: @screen-sm-min) { @rules(); }
+}
+.sm(@rules) {
+  @media (min-width: @screen-sm-min) { @rules(); }
+}
+.md(@rules) {
+  @media (min-width: @screen-md-min) { @rules(); }
+}
+.lg(@rules) {
+  @media (min-width: @screen-lg-min) { @rules(); }
+}
+
+.center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.content {
+  flex: 1;
+}

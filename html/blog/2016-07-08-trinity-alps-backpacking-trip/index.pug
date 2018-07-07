@@ -1,0 +1,17 @@
+extends ../../_templates/_layouts/blog-post.pug
+
+
+block postData
+  - postTitle = 'Trinity Alps Backpacking Trip'
+  - postDate = 'July 8, 2015'
+
+
+block post
+  p This weekend I went on a 4-day backpacking trip in the Canyon Creek area of Trinity Alps Wilderness with Matt and Keilah.
+
+  p.
+    Photo album is <a href="https://goo.gl/photos/cXXyMGTduANb1cvA9">here</a>.
+    <br/>
+    Trip map is <a href="http://caltopo.com/m/JVN9">here</a>.
+
+  include:marked ./trail-log.md

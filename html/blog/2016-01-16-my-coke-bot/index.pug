@@ -1,0 +1,47 @@
+extends ../../_templates/_layouts/blog-post.pug
+
+
+block postData
+  - postTitle = 'My Coke Bot'
+  - postDate = 'January 16, 2016'
+
+
+block post
+  p <a href="http://www.mycokerewards.com" target="_blank">My Coke Rewards</a> is a program run by Coca-Cola that allows you to collect and redeem points from Coke products.  Ever seen those little codes printed on bottle caps or boxes?  Modern advances in alchemy now enable us to transmute those seemingly random characters into rewards like gift cards, movie tickets, and t-shirts (my personal favorite)!
+
+  center
+    img(src="http://i.imgur.com/2L4318Am.jpg")
+    br
+    span(style="font-size: 30px") ↓
+    br
+    img(src="http://i.imgur.com/psBPqram.jpg")
+
+  p It used to be pretty easy to log in and add codes to your account.  Unfortunately, My Coke Rewards recently redesigned their website and made it twice as slow, three times as unreliable, and five times as annoying.  Every time you log in, you're assaulted with messages to link your Facebook and Twitter accounts, presumably because people want to post on Facebook and Twitter about My Coke Rewards.  Let's be real, who would be lame enough to write anything about such a program?  Definitely not me???
+
+  p In light of their regrettable redesign, I decided to take matters into my own hands and set up a way to automate submission of these codes into their website.  The solution I developed allows me to send a text message containing the code and have it redeemed to my account automatically!
+
+  center
+    a(href='http://i.imgur.com/awwrqyb.jpg')
+      img(src='http://i.imgur.com/awwrqybl.jpg')
+
+
+
+  h2 Explanation
+
+  p I'm using a service called <a href="https://www.twilio.com" target="_blank">Twilio</a> to provide me with text messaging capabilities.  I pay $1/month for a permanent phone number that I can send/receive text messages from for a little less than a penny per message.
+
+  p The process:
+
+  ol
+    li I send a text message to the Twilio phone number containing the code
+    li Twilio notifies my server of the text message
+    li My server:
+      ul
+        li Logs into the My Coke Rewards website
+        li Enters the code
+        li Verifies the code added points to my account
+        li Sends a text message back with a success or failure message
+
+  p On the more technical side of things, I'm using an excellent library called <a href="https://github.com/segmentio/nightmare" target="_blank">Nightmare.js</a> that allows me to interact with the My Coke Rewards website inside a headless browser.  The app runs as a <a href="https://www.docker.com" target="_blank">Docker</a> container on a <a href="https://www.digitalocean.com" target="_blank">Digital Ocean</a> host and is administered via <a href="https://github.com/dokku/dokku" target="_blank">Dokku</a>.
+
+  p You can see the source code <a href="https://github.com/scott113341/MyCokeBot" target="_blank">here</a>.

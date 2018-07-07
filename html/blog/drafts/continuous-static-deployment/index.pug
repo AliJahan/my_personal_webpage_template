@@ -1,0 +1,10 @@
+extends /html/_templates/_layouts/blog-post.pug
+
+
+block postData
+  - postTitle = 'Continuous Static Deployment'
+  - postDate = 'February 14, 2016'
+
+
+block post
+  include:marked ./post.md

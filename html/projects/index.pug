@@ -1,0 +1,84 @@
+extends ../_templates/_layouts/default.pug
+
+
+block vars
+  - title = 'Scott Hardy · Projects'
+  - navPage = 'projects'
+
+
+block content
+  -
+    var projects = [
+      {
+        name: 'yarn add shirts',
+        img: 'yarn-add-shirts.png',
+        link: 'https://www.yarn-add-shirts.com',
+        description: 'Website to order custom "yarn add pkg-name" shirts. Brutalist design with aggressively simple UX.',
+        tags: ['Cycle.js', 'Styletron', 'Node.js']
+      },
+      {
+        name: 'post',
+        img: 'post.png',
+        link: 'https://post.scotthardy.me',
+        source: 'https://github.com/scott113341/post',
+        description: 'Simple mobile webapp that directly calls the Lob.com API to mail postcards for under $1.',
+        tags: ['React/Redux', 'Lob.com API']
+      },
+      {
+        name: 'Soundcasts',
+        img: 'soundcasts.png',
+        link: 'https://www.soundcasts.com',
+        source: 'https://github.com/soundcasts',
+        description: 'A website I made with Ryan and Matt that turns SoundCloud profiles into RSS podcast feeds.',
+        tags: ['Node.js', 'Cycle.js']
+      },
+      {
+        name: 'SCU•classes',
+        img: 'scuclasses.png',
+        link: 'http://scuclasses.com',
+        description: 'A website I made for Santa Clara students to streamline class registration.  Used by over 90% of students.',
+        tags: ['Angular.js', 'Ruby on Rails', 'Bootstrap', 'PostgreSQL']
+      },
+      {
+        name: 'SCU•books',
+        img: 'scubooks.png',
+        link: 'http://scubooks.com',
+        description: 'A website for Santa Clara students to save money on their textbooks. Personalized to your schedule.',
+        tags: ['Angular.js', 'Ruby on Rails', 'Bootstrap', 'PostgreSQL']
+      },
+      {
+        name: 'Powder Keg Brewing Company',
+        img: 'pkbc.png',
+        link: 'http://www.powderkegbrewingcompany.com',
+        source: 'https://github.com/scott113341/powderkegbrewingcompany',
+        description: 'The website for Powder Keg Brewing Company, a new craft brewery in Niwot, Colorado.',
+        tags: ['Ruby on Rails', 'Angular.js']
+      }
+    ]
+
+  #projects
+    h1 Projects
+    p Here's a showcase of the projects I'm most proud of.
+    .row
+      each project in projects
+        .col-sm-6
+          .project
+            h2.name= project.name
+
+            a(href=project.link)
+              img(src=project.img)
+
+            p.visit
+              if project.link
+                a(href=project.link) Visit site
+
+              if project.link && project.source
+                span &nbsp&middot;&nbsp;
+
+              if project.source
+                a(href=project.source) View source
+
+            p!= project.description
+
+            each tag in project.tags
+              span.tag= tag

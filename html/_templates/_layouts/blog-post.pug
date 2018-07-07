@@ -1,0 +1,21 @@
+extends ./default.pug
+
+
+block vars
+  - title = 'Ali Jahan · Blog'
+  - navPage = 'blog'
+
+
+block content
+  block postData
+
+  #blog-post
+    .row
+      .col-sm-8
+        p
+          a(href='/~ajaha004/blog') Back to blog
+
+        h1= postTitle
+        h4= postDate
+
+        block post

@@ -1,0 +1,36 @@
+block default-vars
+  - title = 'Ali Jahanshahi'
+  - navPage = 'home'
+block vars
+
+
+doctype html
+html(lang='en')
+  head
+    block head
+      title= title
+
+      meta(charset='utf-8')
+      meta(name='viewport', content='width=device-width, initial-scale=1')
+      meta(name='google-site-verification', content='EHkUAAPr6Gml10wBbmwxjQEFwMrI08RVUpnOcpM1s_U')
+
+      link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900|Montserrat:400,700')
+      link(rel='stylesheet', href='/~ajaha004/app.css')
+      link(rel='icon', href='/~ajaha004/favicon-196x196.png')
+
+  body
+    include ../_partials/header.pug
+
+    .container.content
+      .row
+        .col-sm-2
+          include ../_partials/nav.pug
+        .col-sm-10
+          block content
+
+    include ../_partials/footer.pug
+
+    include ../_partials/google-analytics.pug
+
+    if __DEV
+      include ../_partials/livereload.pug

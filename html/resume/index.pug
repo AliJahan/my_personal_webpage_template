@@ -1,0 +1,163 @@
+extends ../_templates/_layouts/default.pug
+
+
+block vars
+  - title = 'Scott Hardy · Résumé'
+  - navPage = 'resume'
+
+
+block content
+  #resume
+    h1 Résumé
+
+    .general-info
+      p #[strong Email]: #[a(href='mailto:scott.the.hardy@gmail.com') scott.the.hardy@gmail.com]
+      p #[strong Phone]: #[a(href='tel://1-303-917-2466') (303) 917-2466]
+      p.only-print #[strong Website]: #[a(href='https://www.scotthardy.me') scotthardy.me]
+      p #[strong Github]: #[a(href='https://github.com/scott113341') github.com/scott113341]
+      p #[strong LinkedIn]: #[a(href='https://www.linkedin.com/in/scott113341') linkedin.com/in/scott113341]
+
+    .section-1
+      h2 Job Experience
+      .section-2
+        h3
+          span Software Engineer
+          |  at brightwheel
+          small February 2017 - Present | San Francisco, CA
+        p Working full-time developing software for the main brightwheel product.
+      .section-2
+        h3
+          span Founder and Sole Member
+          |  of The Scott Hardy LLC
+          small May 2013 - Present | San Francisco, CA
+        p Working full-time on personal projects, open source software, small business ventures, and more.
+        ul
+          li Personal projects: #[a(href='https://post.scotthardy.me') post], a mobile webapp that directly calls the #[a(href='https://lob.com') Lob.com] API to mail postcards for under $1 (#[a(href='https://github.com/scott113341/post') source])
+          li Open source: #[a(href='https://github.com/scott113341/npm-install-version') npm-install-version], a module that installs/requires multiple versions of the same package
+          li Small business: #[a(href='https://www.yarn-add-shirts.com') yarn add shirts], a website that sells custom niche JavaScript t-shirts
+      .section-2
+        h3
+          span Software Engineer
+          |  at eBay
+          small November 2014 - April 2016 | San Jose, CA
+        p Worked full-time developing software in support of the storage operation team.
+        ul
+          li Worked on a small team of three developers supporting storage operation team of about 15
+          li Worked as main developer on storage insight platform, consisting of collection software (vanilla Python), API (Django), and UI (Angular)
+          li Built environment-specific build tool for production deployments using Docker and Fabric
+          li Modernized JavaScript development practices on the development team (build process, modularization)
+      //.section-2
+      //  h3
+      //    span Web Developer
+      //    |  at Powder Keg Brewing Company
+      //    small January 2014 - Present | Niwot, CO
+      //  p Working semi-part-time on developing the brewery's website and being a general technology consultant, manual laborer, and beer taster.
+      //  ul
+      //    li Created Ruby on Rails website for the brewery
+      //    li Designed the admin backend for managing beers/taplist/food/menu
+      //    li Consolidated data and functionality into the website to avoid out-of-sync data
+      //    li Worked with other investors to create automatically-generated reports for financial performance monitoring
+      .section-2
+        h3
+          span Software Development Intern
+          |  at Spectra Logic
+          small Summer 2013 | Boulder, CO
+        p Worked mainly on the admin web UI written in Backbone with a Ruby on Rails backend, and the underlying Ruby worker code.
+        ul
+          li Adapted entire existing web UI to be responsive on mobile devices
+          li Created new CLI functionality by extending existing classes
+          li Wrote new classes and associated unit tests
+          li Fixed miscellaneous bugs in Ruby and JavaScript
+          li Worked full-time in 2-week sprint cycles
+      //.section-2
+      //  h3
+      //    span Community Facilitator
+      //    |  at Santa Clara University
+      //    small 2011/12 and 2012/13 Academic Years | Santa Clara, CA
+      //  p Resident Assistant equivalent.  Worked on 12-person team for two years with one floor partner.
+      //  ul
+      //    li Managed more than 50 students on my floor each year
+      //    li Created a PHP web application for building to track event attendance
+      //    li Supported dozens of students through everything from homesickness to serious wellness issues
+      //    li Planned about 50 events for floor and building
+      .section-2
+        h3
+          span Technical Co-Founder and Vice President
+          |  at Fashion Feather LLC.
+          small February 2011 - September 2011 | Longmont, CO
+        p Started an online business selling hair feathers, a hot fashion trend during the 2011 summer. This was the second website I ever made, and my first real business.
+        ul
+          li Facilitated over $100k in gross sales on custom PHP website with Google Checkout integration
+          li Designed and optimized order fulfillment and shipping workflow
+          li Managed Google AdWords account (which drove the vast majority of sales)
+          li Managed company finances as Treasurer
+          li Hired and managed 10 employees for order fulfillment
+    .section-1
+      h2 Projects
+      p See more projects at #[a(href='https://www.scotthardy.me/projects/') scotthardy.me/projects] or #[a(href='https://github.com/scott113341') github.com/scott113341]
+      .section-2
+        h3 yarn add shirts
+          small November 2016 - Present
+        p A website that sells custom niche JavaScript t-shirts. #[a(href='https://www.yarn-add-shirts.com') yarn-add-shirts.com]
+        ul
+          li General API backend to handle billing and fulfillment
+          li Frontend built with Cycle.js, hosted on GitHub Pages
+          li Backend built with Express.js, hosted on Heroku
+      .section-2
+        h3 SCU•classes
+          small February 2013 - Present
+        p A class scheduling website I built for Santa Clara University students in February 2013.
+        ul
+          li Identified the need for a replacement for the school's class search web app
+          li Performed extensive user testing during development to ensure an intuitive UI
+          li Over 500,000 visits since launch
+          li Over 90% of undergrads at SCU use SCU•classes
+          li Built with Angular.js and Ruby on Rails, hosted on Heroku
+      .section-2
+        h3 SCU•books
+          small January 2013 - Present
+        p A textbook price comparison website I built for Santa Clara University students in January 2013.
+        ul
+          li Was inspired/furious by how expensive textbooks were at the school bookstore
+          li Worked with friends to expand to other 8 schools, leveraging the I18n gem to keep code extremely DRY and hosted on the same server
+          li Optimized codebase to concurrently access price APIs (Amazon, Barnes and Noble, etc.)
+          li Has been used over 22,000 times by students (all schools)
+          li Built with Angular.js and Ruby on Rails, hosted on Heroku
+    .section-1
+      h2 Skills
+      .section-2
+        h3 Software Development
+        ul
+          li #[strong JavaScript frontend]: Cycle, React, Angular, Vanilla
+          li #[strong JavaScript backend]: Node.js, Express
+          li #[strong Ruby]: Rails, Sinatra
+          li #[strong Database]: PostgreSQL, MySQL, Firebase
+          li #[strong Infrastructure]: Heroku, Docker, Dokku
+      .section-2
+        h3 Laboratory Techniques
+        ul
+          li #[strong Microfluidics]: PDMS mold and device fab, electrophoretic separation
+          li #[strong Tissue engineering]: U87 cell culture, trypsinization, and passaging
+          li #[strong Biology]: standard lab techniques
+          li #[strong Chemistry]: general and organic chemistry
+      .section-2
+        h3 Spanish
+        ul
+          li Five Spanish classes in high school (scored 5 on AP Spanish exam)
+          li 2-week immersion trips to Mexico and Peru
+          li Two upper-division Spanish classes in college
+    .section-1
+      h2 Education
+      .section-2
+        h3 Santa Clara University
+          small Class of 2014 | Santa Clara, CA
+        h4 Bachelor of Science, Bioengineering
+        h4 University Honors Program
+        p #[strong GPA]: 3.368
+        p #[strong Major GPA]: 3.466
+      .section-2
+        h3 Silver Creek High School
+          small Class of 2010 | Longmont, CO
+    .section-1
+      h2 References
+      p Available upon request
