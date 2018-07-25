@@ -2,7 +2,7 @@ extends ../_templates/_layouts/default.pug
 
 
 block vars
-  - title = 'Scott Hardy · Projects'
+  - title = 'Ali Jahan · Projects'
   - navPage = 'projects'
 
 
@@ -10,55 +10,55 @@ block content
   -
     var projects = [
       {
-        name: 'yarn add shirts',
-        img: 'yarn-add-shirts.png',
-        link: 'https://www.yarn-add-shirts.com',
-        description: 'Website to order custom "yarn add pkg-name" shirts. Brutalist design with aggressively simple UX.',
-        tags: ['Cycle.js', 'Styletron', 'Node.js']
+        name: 'Adding Resource Reservation and Monitoring Support to Linux Kernel (Multiprocessor System)',
+        img: '',
+        link: '',
+        source: '',
+        description: 'Resource Reservation (using system sall), Resource Reservations Report (using kernel module), Periodic Task Support (using system call and hr_timer), Budget overrun notification (using signal), Schedulability  test, Partitioning algorithms (Best-fit, Worst-fit, and First-fit) using SYSFS interface',
+        tags: ['Linux Kernel', 'Syscall', 'Sysfs', 'HRTimer', 'Kernel Module', 'Signal']
       },
       {
-        name: 'post',
-        img: 'post.png',
-        link: 'https://post.scotthardy.me',
-        source: 'https://github.com/scott113341/post',
-        description: 'Simple mobile webapp that directly calls the Lob.com API to mail postcards for under $1.',
-        tags: ['React/Redux', 'Lob.com API']
+        name: 'Getting Virtual Memory Info from Linux Kernel',
+        img: '',
+        link: '',
+        source: '',
+        description: 'Adding syscalls to kernel in order to: print the start and end addresses of the code, data, and heap segments of a process, print the entire memory-mapped areas of a process, prints the number of pages that reside in the physical memory',
+        tags: ['Linux Kernel', 'Syscall', 'Virtual Memory', 'PTE']
       },
       {
-        name: 'Soundcasts',
-        img: 'soundcasts.png',
-        link: 'https://www.soundcasts.com',
-        source: 'https://github.com/soundcasts',
-        description: 'A website I made with Ryan and Matt that turns SoundCloud profiles into RSS podcast feeds.',
-        tags: ['Node.js', 'Cycle.js']
+      name: 'Tiny CNN on FPGA',
+      img: '',
+      link: '',
+      description: 'Implementation of a tiny modular CNN on FPGA by CHISEL',
+      tags: ['CNN', 'CHISEL', 'Zynq', 'FPGA']
       },
-      {
-        name: 'SCU•classes',
-        img: 'scuclasses.png',
-        link: 'http://scuclasses.com',
-        description: 'A website I made for Santa Clara students to streamline class registration.  Used by over 90% of students.',
-        tags: ['Angular.js', 'Ruby on Rails', 'Bootstrap', 'PostgreSQL']
-      },
-      {
-        name: 'SCU•books',
-        img: 'scubooks.png',
-        link: 'http://scubooks.com',
-        description: 'A website for Santa Clara students to save money on their textbooks. Personalized to your schedule.',
-        tags: ['Angular.js', 'Ruby on Rails', 'Bootstrap', 'PostgreSQL']
-      },
-      {
-        name: 'Powder Keg Brewing Company',
-        img: 'pkbc.png',
-        link: 'http://www.powderkegbrewingcompany.com',
-        source: 'https://github.com/scott113341/powderkegbrewingcompany',
-        description: 'The website for Powder Keg Brewing Company, a new craft brewery in Niwot, Colorado.',
-        tags: ['Ruby on Rails', 'Angular.js']
-      }
+      // {
+      //   name: 'Multiprocessor Scheduling and Admission Control',
+      //   img: '',
+      //   link: '',
+      //   description: 'A website I made for Santa Clara students to streamline class registration.  Used by over 90% of students.',
+      //   tags: ['Angular.js', 'Ruby on Rails', 'Bootstrap', 'PostgreSQL']
+      // },
+      // {
+      //   name: 'SCU•books',
+      //   img: 'scubooks.png',
+      //   link: 'http://scubooks.com',
+      //   description: 'A website for Santa Clara students to save money on their textbooks. Personalized to your schedule.',
+      //   tags: ['Angular.js', 'Ruby on Rails', 'Bootstrap', 'PostgreSQL']
+      // },
+      // {
+      //   name: 'Powder Keg Brewing Company',
+      //   img: 'pkbc.png',
+      //   link: 'http://www.powderkegbrewingcompany.com',
+      //   source: 'https://github.com/scott113341/powderkegbrewingcompany',
+      //   description: 'The website for Powder Keg Brewing Company, a new craft brewery in Niwot, Colorado.',
+      //   tags: ['Ruby on Rails', 'Angular.js']
+      // }
     ]
 
   #projects
     h1 Projects
-    p Here's a showcase of the projects I'm most proud of.
+    p Here's the list of the projects I have done or participated in:
     .row
       each project in projects
         .col-sm-6
