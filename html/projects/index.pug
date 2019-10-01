@@ -10,35 +10,111 @@ block content
   -
     var projects = [
       {
-        name: 'Adding Support for Resource Reservation & Monitoring on Multiprocessor Systems to Linux Kernel',
+        name: 'Adding a New CPUIdle Governor to Linux Kernel for HPC Applications',
         img: '',
         link: '',
         source: '',
-        description: 'Resource Reservation (using system sall), Resource Reservations Report (using kernel module), Periodic Task Support (using system call and hr_timer), Budget overrun notification (using signal), Schedulability  test, Partitioning policies (Best-fit, Worst-fit, and First-fit) by Sysfs interface',
-        tags: ['Embedded OS', 'Linux Kernel', 'Syscall', 'Sysfs', 'HRTimer', 'Kernel Module', 'Signal']
+        platform: [],
+        description: '',
+        lib:['C'],
+        tags: ['Linux Kernel', 'CPUIdle', 'HPC']
       },
       {
-        name: 'Adding Support for Getting Virtual Memory Info to Linux Kernel',
+        name: 'Implementation of a Machine Learning Based Border Gateway Protocol (BGP) Anomaly Detection',
         img: '',
         link: '',
         source: '',
-        description: 'Adding syscalls to kernel in order to: print the start and end addresses of the code, data, and heap segments of a process, print the entire memory-mapped areas of a process, print the number of pages that reside in the physical memory',
-        tags: ['Embedded OS', 'Linux Kernel', 'Syscall', 'Virtual Memory', 'PTE']
+        platform: [],
+        description: '',
+        lib:['Python', 'MATLAB'],
+        tags: ['BGP', 'ML']
       },
       {
-        name: 'Tiny CNN on FPGA',
+        name: 'Implementation of an LLVM pass for Path Profiling Based on Ball-Larus Method',
         img: '',
         link: '',
-        description: 'Implementation of a tiny modular CNN on FPGA by CHISEL',
-        tags: ['CNN', 'CHISEL', 'Zynq', 'FPGA']
+        source: '',
+        platform: [],
+        description: '',
+        lib:['C/C++'],
+        tags: ['Compiler', 'LLVM', 'Instrumentation']
       },
       {
-        name: 'Program Analysis and Instrumentation by LLVM',
+        name: 'Design and Implementation of Tiny Modular CNN Accelerator for Embedded FPGA',
         img: '',
         link: '',
-        description: 'Implementing a basic program analysis and instrumentation technique to perform Edge Profiling, and Path Profiling (Ball-Larus paths)',
-        tags: ['Compiler Construction', 'LLVM Pass', 'Program Instrumentation']
+        source: '',
+        platform: ['PYNQ FPGA Board'],
+        description: '',
+        lib:['CHISEL', 'Python', 'Keras', 'TensorFlow' ],
+        tags: ['CNN', 'ML', 'FPGA', 'Accelerator']
       },
+      {
+        name: 'Adding Support for Resource Reservation to Linux Kernel',
+        img: '',
+        link: '',
+        source: '',
+        platform: ['Raspberry Pi'],
+        description: '',//'Resource Reservation (using system sall), Resource Reservations Report (using kernel module), Periodic Task Support (using system call and hr_timer), Budget overrun notification (using signal), Schedulability  test, Partitioning policies (Best-fit, Worst-fit, and First-fit) by Sysfs interface',
+        lib:['C'],
+        tags: ['Real-time OS', 'Embedded Systems']
+      },
+      {
+        name: 'Collaborated in GPU Accelerated Network Function Virtualization (NFV) Project',
+        img: '',
+        link: '',
+        source: '',
+        platform: [],
+        description: '',//Collaborated in the project leading by Kiran Ranganath and Marcus Chow',
+        lib:['CUDA', 'C/C++', 'DPDK'],
+        tags: ['GPGPU', 'Accelerator']
+      },
+      {
+        name: 'Implementation of AES-GCM Authenticated Encryption Hardware Accelerator',
+        img: '',
+        link: '',
+        source: '',
+        platform: ['Zynq FPGA Board'],
+        description: '',//'Used as a component of cryptographic accelerator engine of a hardware security module',
+        lib:['CHISEL'],
+        tags: ['Cryptography', 'Accelerator', 'HSM']
+      },
+      {
+        name: 'Devepoling User-space API and Kernel Driver for Exposing Hardware Accelerators to Software Stack',
+        img: '',
+        link: '',
+        platform: ['Zynq FPGA Board'],
+        lib:['C/C++'],
+        description: '',
+        tags: ['Cryptography', 'HSM']
+      },
+      {
+        name: 'Implementing a Graph Processing Framework for Evolutionary Dynamics of Complex Networks',
+        img: '',
+        link: '',
+        platform: [],
+        lib:['C/C++'],
+        description: '',
+        tags: ['Complex Systems', 'Graph', 'Evolutionary Dynamics']
+      },
+      {
+        name: 'Design and Implementation of High-level Synthesis Framework for Approximate Sequential Circuits',
+        img: '',
+        link: '',
+        platform: [],
+        lib:['C/C++', 'Gurobi Optimizer'],
+        description: '',
+        tags: ['HLS', 'Approximate Computing', 'Linear Programming']
+      },
+      {
+        name: 'Design of a Simple MUX-Based FPGA Chip',
+        img: '',
+        link: '',
+        platform: [],
+        lib:['Verilog', 'Java', 'Synopsys Design Compiler'],
+        description: '',
+        tags: ['ASIC Design']
+      }
     // {
       //   name: 'Multiprocessor Scheduling and Admission Control',
       //   img: '',
@@ -65,7 +141,11 @@ block content
 
   #projects
     h1 Projects
-    p Here's the list of the projects I have done or participated in:
+    span Here's the list of the projects I have done or participated in:
+    p.tagGuide='Tag'
+    p.platformGuide='Platform'
+    p.libGuide='Language/Library/Tool'
+    hr
     .row
       each project in projects
         .col-sm-6
@@ -87,5 +167,13 @@ block content
 
             p!= project.description
 
+            each lib in project.lib
+              span.lib= lib
+            //<br />
+            each pf in project.platform
+              span.platform= pf
+
             each tag in project.tags
               span.tag= tag
+
+
