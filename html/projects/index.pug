@@ -10,14 +10,14 @@ block content
   -
     var projects = [
       {
-        name: 'Adding a New CPUIdle Governor to Linux Kernel for HPC Applications',
-        img: '',
-        link: '',
-        source: '',
-        platform: [],
-        description: '',
-        lib:['C'],
-        tags: ['Linux Kernel', 'CPUIdle', 'HPC']
+      name: 'Adding a New CPUIdle Governor to Linux Kernel for HPC Applications',
+      img: '',
+      link: '',
+      source: '',
+      platform: [],
+      description: 'The patch to be published on github',
+      lib:['C'],
+      tags: ['Linux Kernel', 'CPUIdle', 'HPC']
       },
       {
         name: 'Implementation of a Machine Learning Based Border Gateway Protocol (BGP) Anomaly Detection',
@@ -25,37 +25,47 @@ block content
         link: '',
         source: '',
         platform: [],
-        description: '',
+        description: 'Graduate Data Mining course final project',
         lib:['Python', 'MATLAB'],
         tags: ['BGP', 'ML']
       },
       {
-        name: 'Implementation of an LLVM pass for Path Profiling Based on Ball-Larus Method',
-        img: '',
-        link: '',
-        source: '',
-        platform: [],
-        description: '',
-        lib:['C/C++'],
-        tags: ['Compiler', 'LLVM', 'Instrumentation']
+      name: 'A Brief Review on Some Architectures Providing Support for DIFT',
+      img: '',
+      link: '/~ajaha004/files/DIFT.pdf',
+      source: '',
+      platform: [],
+      description: 'Computer Architecture Security course',
+      lib:[],
+      tags: ['Computer Architecture', 'Security', 'DIFT', 'RISC-V', 'Rocket', 'Open-source Hardware']
       },
       {
         name: 'Design and Implementation of Tiny Modular CNN Accelerator for Embedded FPGA',
         img: '',
-        link: '',
+        link: '/~ajaha004/files/tinyCNN.pdf',
         source: '',
         platform: ['PYNQ FPGA Board'],
-        description: '',
+        description: 'DAC 2019 System Design Contest, Graduate Computer Vision course final project',
         lib:['CHISEL', 'Python', 'Keras', 'TensorFlow' ],
         tags: ['CNN', 'ML', 'FPGA', 'Accelerator']
+      },
+      {
+      name: 'Implementation of an LLVM pass for Path Profiling Based on Ball-Larus Method',
+      img: '',
+      link: '',
+      source: '',
+      platform: [],
+      description: 'Graduate Compiler Construction course project',
+      lib:['C/C++'],
+      tags: ['Compiler', 'LLVM', 'Instrumentation']
       },
       {
         name: 'Adding Support for Resource Reservation to Linux Kernel',
         img: '',
         link: '',
-        source: '',
+        source: 'https://github.com/AliJahan/RealtimeKernel',
         platform: ['Raspberry Pi'],
-        description: '',//'Resource Reservation (using system sall), Resource Reservations Report (using kernel module), Periodic Task Support (using system call and hr_timer), Budget overrun notification (using signal), Schedulability  test, Partitioning policies (Best-fit, Worst-fit, and First-fit) by Sysfs interface',
+        description: 'Resource Reservation (using system sall), Resource Reservations Report (using kernel module), Periodic Task Support (using system call and hr_timer), Budget overrun notification (using signal), Schedulability  test, Partitioning policies (Best-fit, Worst-fit, and First-fit) by Sysfs interface',
         lib:['C'],
         tags: ['Real-time OS', 'Embedded Systems']
       },
@@ -75,9 +85,18 @@ block content
         link: '',
         source: '',
         platform: ['Zynq FPGA Board'],
-        description: '',//'Used as a component of cryptographic accelerator engine of a hardware security module',
+        description: 'Used as a component of cryptographic accelerator engine of a hardware security module (HSM)',
         lib:['CHISEL'],
         tags: ['Cryptography', 'Accelerator', 'HSM']
+      },
+      {
+      name: 'Implementing a Graph Processing Framework for Evolutionary Dynamics of Complex Networks',
+      img: '',
+      link: '',
+      platform: [],
+      lib:['C/C++'],
+      description: '',
+      tags: ['Complex Systems', 'Graph', 'Evolutionary Dynamics', 'HPC', 'Multi-threading']
       },
       {
         name: 'Devepoling User-space API and Kernel Driver for Exposing Hardware Accelerators to Software Stack',
@@ -85,17 +104,8 @@ block content
         link: '',
         platform: ['Zynq FPGA Board'],
         lib:['C/C++'],
-        description: '',
+        description: 'Hardware security module (HSM) project',
         tags: ['Cryptography', 'HSM']
-      },
-      {
-        name: 'Implementing a Graph Processing Framework for Evolutionary Dynamics of Complex Networks',
-        img: '',
-        link: '',
-        platform: [],
-        lib:['C/C++'],
-        description: '',
-        tags: ['Complex Systems', 'Graph', 'Evolutionary Dynamics']
       },
       {
         name: 'Design and Implementation of High-level Synthesis Framework for Approximate Sequential Circuits',
@@ -113,7 +123,7 @@ block content
         platform: [],
         lib:['Verilog', 'Java', 'Synopsys Design Compiler'],
         description: '',
-        tags: ['ASIC Design']
+        tags: ['ASIC Design', 'FPGA']
       }
     // {
       //   name: 'Multiprocessor Scheduling and Admission Control',
@@ -143,8 +153,8 @@ block content
     h1 Projects
     span Here's the list of the projects I have done or participated in:
     p.tagGuide='Tag'
-    p.platformGuide='Platform'
     p.libGuide='Language/Library/Tool'
+    p.platformGuide='Platform'
     hr
     .row
       each project in projects
@@ -155,9 +165,11 @@ block content
             a(href=project.link)
               img(src=project.img)
 
+            p!= project.description
+
             p.visit
               if project.link
-                a(href=project.link) Visit site
+                a(href=project.link) Report
 
               if project.link && project.source
                 span &nbsp&middot;&nbsp;
@@ -165,15 +177,13 @@ block content
               if project.source
                 a(href=project.source) View source
 
-            p!= project.description
-
             each lib in project.lib
               span.lib= lib
-            //<br />
-            each pf in project.platform
-              span.platform= pf
-
+            <br />
             each tag in project.tags
               span.tag= tag
+            <br />
+            each pf in project.platform
+              span.platform= pf
 
 
