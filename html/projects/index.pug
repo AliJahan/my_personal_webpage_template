@@ -176,12 +176,11 @@ block content
 
               if project.source
                 a(href=project.source) View source
-
-            each lib in project.lib
-              span.lib= lib
-            <br />
             each tag in project.tags
               span.tag= tag
+            <br />
+            each lib in project.lib
+              span.lib= lib
             <br />
             each pf in project.platform
               span.platform= pf
