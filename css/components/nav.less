@@ -14,18 +14,29 @@
     list-style: none;
     width: 100%;
 
-    a {
-      display: block;
-      padding: 4px 10px;
-      font-size: 1em;
-      color: @dark-gray;
-      text-decoration: none;
+    &.info {
+      .icon {
+        display: inline-block;
+        fill: @link;
+        height: 18px;
+        width: 24px;
 
-      .xs({
-        padding: 10px;
-      });
+        &:hover {
+          fill: @link-hover;
+        }
+      }
+      a {
+        display: block;
+        padding: 4px 10px;
+        font-size: 1em;
+        color: @dark-gray;
+        text-decoration: none;
+        float: left;
+        .xs({
+          padding: 10px;
+        });
+      }
     }
-
     &.active {
       background: @nav-active;
 
@@ -41,6 +52,18 @@
     .xs({
       width: 100%;
     });
+
+    a {
+      display: block;
+      padding: 4px 10px;
+      font-size: 1em;
+      color: @dark-gray;
+      text-decoration: none;
+
+      .xs({
+        padding: 10px;
+      });
+    }
   }
 
   .xs({
@@ -58,4 +81,5 @@
     width: @width;
     clip-path: circle(50% at 50% 50%);
   }
+
 }

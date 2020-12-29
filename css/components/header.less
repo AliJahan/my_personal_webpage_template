@@ -3,10 +3,79 @@
 
 #header {
   font-family: 'Montserrat', sans-serif;
+  tr {
+    width: 100%;
+  }
+  td {
+    padding-bottom: 0.67em;
+    border-bottom: 3px solid @border-gray;
+    margin-bottom: 0;
+
+    &.icon-cell {
+      width: 100%;
+      .xs({
+        margin-top: 10px;
+      });
+
+      p {
+        margin: 0 0 7px;
+      }
+
+      .icon {
+        display: inline-block;
+        fill: @link;
+        height: 18px;
+        width: 24px;
+
+        &:hover {
+          fill: @link-hover;
+        }
+      }
+
+      .left {
+        font-size: 18px;
+
+        a {
+          margin-right: 8px;
+          text-decoration: none;
+        }
+
+        .ss-mail:before, .ss-octocat:before {
+          vertical-align: middle;
+        }
+      }
+
+      .middle {
+        text-align: center;
+      }
+
+      .right {
+        text-align: right;
+      }
+    }
+
+    &.title-cell {
+      width: 95%;
+      font-weight: 400;
+      text-align: center;
+
+      a {
+        text-decoration: none;
+        color: @text-black;
+
+        letter-spacing: 6px;
+        transition: 150ms;
+
+        &:hover {
+          letter-spacing: 7px;
+        }
+      }
+    }
+  }
 
   h1 {
     padding-bottom: 0.67em;
-    border-bottom: 2px solid @border-gray;
+    border-bottom: 3px solid @border-gray;
     margin-bottom: 0;
 
     font-weight: 400;
