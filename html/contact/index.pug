@@ -2,13 +2,21 @@ extends ../_templates/_layouts/default.pug
 
 
 block vars
-  - title = 'Ali Jahan · Resume'
-  - navPage = 'resume'
+  - title = 'Ali Jahan · Contact info.'
+  - navPage = 'contact'
 
 
 block content
-  #resume
-    h1 Resume
+  #contact
+    h2 Contact Info
+    ul.contact
+      //li
+      //  strong Email: (pagetitle)91(aT)gmail(dOt)com
+      li
+        strong GitHub: #[a(href='https://github.com/alijahan') github.com/alijahan]
+      li
+        strong LinkedIn: #[a(href='https://www.linkedin.com/in/alijahanshahi') linkedin.com/in/alijahanshahi]
+
 
     //.general-info
     //  p #[strong Email]: ajaha004(at)ucr(dot)edu

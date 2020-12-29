@@ -3,32 +3,59 @@ extends ./_templates/_layouts/default.pug
 
 block content
   #home
-    h1 #[img.me(src="/~ajaha004/files/pic.jpg")] Hi, I'm Ali
-    p I'm a research assistant at University of California, Riverside. I joined #[a(href='http://www.danielwong.org/socal.html') SoCal] in Fall 2017.
-    
-    P I work on the intersection of machine learning systems and energy-efficient computing. I have extensive experience in designing software and hardware systems for emerging applications in diverse computational environments, ranging from embedded systems to multi-GPU systems and data centers. I am exploring system and architectural limitations of autonomous vehicles software pipeline, and challenges in integrating edge computing devices in self-driving cars. Recent highlights include:
+    //h1 #[img.me(src="/~ajaha004/files/pic.jpg")]
+    //p I'm a research assistant at University of California, Riverside. I joined #[a(href='http://www.danielwong.org/socal.html') SoCal] in Fall 2017.
+    //h2 About Me
+    P I am a PhD student under the supervision of Dr. Daniel Wong, in the CSE department at University of California, Riverside (UCR).
+    P I work on the intersection of machine learning systems and energy-efficient computing. I have extensive experience in designing software and hardware systems for machine learning applications in diverse computational environments, ranging from embedded systems (FPGA/Raspberry Pi) to multi-GPU systems and data centers. Currently, I am exploring system and architectural limitations of autonomous vehicles software pipeline, and challenges in integrating edge computing devices in autonomous cars.
+    P Recent highlights include:
     ul
       li
-        p Developed Deep Learning solutions in resource-constrained environments (i.e. aerial drones).
+        p #[strong ML Accelerators:] developed accelerated deep learning solutions in embedded resource-constrained environments.
       li 
-        p Benchmarking, evaluating, and improving energy-efficiency of multi-GPU ML systems.
+        p #[strong Systems for ML:] profiling and evaluating bottlenecks and energy-efficiency of multi-GPU ML systems in the production pipeline.
       li
-        p Reinforcement learning-based power and resource management for co-located Cloud and ML workloads in Data Centers.
-    br
-    //p - From #[a(href='https://en.wikipedia.org/wiki/Sirjan') Sirjan], #[a(href='https://en.wikipedia.org/wiki/Kerman') Kerman], #[a(href='https://www.youtube.com/watch?v=6l7n1frqZoY') Iran].
-    //- p - 
-    //p - Find my resume #[a(href='https://www.cs.ucr.edu/~ajaha004/files/AliJahanshahi_Resume.pdf') here] (updated 09/09/2019)
-    //ul
-    //  li Research assistant at
-    //  li Enjoying any and all time spent with my wonderful friends
-    //  li Continuing side projects, weekend adventures, and open source work
-    //  li Living in mid-Sunset San Francisco
-    br
-    p Contact me via:
-    ul.contact
-      //li
-      //  strong Email: (pagetitle)91(aT)gmail(dOt)com
+        p #[strong ML for Systems:] reinforcement learning-based power and resource management for co-located cloud and ML workloads.
+    hr
+    /////////////////////////////////////////////////////////////////////////////
+    h2 News
+    table
+      tr
+        td(class='date-cell') Dec. 2020
+        td(class='data-cell') I will be doing an internship at #[a(href="https://motional.com/") Motional] in Winter'21 as #[strong World Simulation Engineer].
+      tr
+        td(class='space-cell')
+        //td(class='space-cell')
+      tr
+        td(class='date-cell') Sep. 2020
+        td(class='data-cell') Our paper, "#[strong GPU-NEST: Characterizing Energy Efficiency of Multi-GPU Inference Servers]" has been accepted in IEEE Computer Architecture Letters (Volume: 19, Issue: 2, July-Dec. 1 2020).
+    hr
+    /////////////////////////////////////////////////////////////////////////////
+    h2 Blog posts
+    table
+      tr
+        td(class='date-cell') Dec. 2020
+        td(class='data-cell') ROCm
+      tr
+        td(class='space-cell')
+        td(class='space-cell')
+      tr
+        td(class='date-cell') Oct. 2020
+        td(class='data-cell') PyTorch
+    hr
+    /////////////////////////////////////////////////////////////////////////////
+    h2 Papers
+    ul.papers
       li
-        strong GitHub: #[a(href='https://github.com/alijahan') github.com/alijahan]
-      li
-        strong LinkedIn: #[a(href='https://www.linkedin.com/in/alijahanshahi') linkedin.com/in/alijahanshahi]
+        P #[strong A. Jahanshahi], M. K. Taram and N. Eskandari, #[strong Blokus Duo game on FPGA], The 17th CSI Int. Symp. Computer Architecture & Digital Systems (CADS 2013), Tehran, 2013, pp. 149–152, doi: 10.1109/CADS.2013.6714256.
+    //hr
+    ///////////////////////////////////////////////////////////////////////////////
+    //h2 Contact Info
+    //ul.contact
+    //  //li
+    //  //  strong Email: (pagetitle)91(aT)gmail(dOt)com
+    //  li
+    //    strong GitHub: #[a(href='https://github.com/alijahan') github.com/alijahan]
+    //  li
+    //    strong LinkedIn: #[a(href='https://www.linkedin.com/in/alijahanshahi') linkedin.com/in/alijahanshahi]
+

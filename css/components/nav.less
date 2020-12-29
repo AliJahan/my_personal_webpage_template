@@ -4,7 +4,7 @@
 
 #nav {
   padding: 20px 0 0 0;
-  margin: 0;
+  margin: 0%;
 
   .sm({
     min-height: 300px;
@@ -12,7 +12,7 @@
 
   li {
     list-style: none;
-    width: 80%;
+    width: 100%;
 
     a {
       display: block;
@@ -47,4 +47,15 @@
     padding: 10px 0;
     border-bottom: 2px solid @border-gray;
   });
+
+  img {
+    @width: 80px;
+    border-radius: @width / 2;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    width: @width;
+    clip-path: circle(50% at 50% 50%);
+  }
 }

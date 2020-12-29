@@ -1,3 +1,5 @@
+@import '../components/colors';
+
 #home {
 
   .me {
@@ -8,7 +10,32 @@
     clip-path: circle(50% at 50% 50%);
   }
 
+  .papers {
+    padding-left: 20px;
+  }
+
   .contact {
     list-style: none;
+  }
+
+  td {
+    &.date-cell {
+      width: 60px;
+      height: 40px;
+      padding: 2px;
+      text-align: center;
+      background: @nav-active;
+      color: white;
+    }
+    &.data-cell {
+      padding: 2px 2px 2px 5px;
+      text-align: left;
+      color: black;
+    }
+    &.space-cell {
+      padding: 2px;
+      //text-align: left;
+      background: white;
+    }
   }
 }
