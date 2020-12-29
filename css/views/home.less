@@ -18,7 +18,7 @@
     list-style: none;
   }
 
-  td {
+  td {;
     &.date-cell {
       width: 60px;
       height: 40px;
@@ -26,14 +26,35 @@
       text-align: center;
       background: @nav-active;
       color: white;
+      border: .5px solid @nav-active;
+      border-left: 5px solid @nav-hover;
+      border-right: 5px solid @nav-hover;
+      width: 5%;
     }
-    &.data-cell {
+    &.link-cell {
+      width: 60px;
+      height: 40px;
+      padding: 2px;
+      text-align: center;
+      background: @nav-hover;
+      color: white;
+      a {
+        color: white;
+      }
+      border: .5px solid @nav-active;
+      border-right: 5px solid @nav-active;
+      border-left: 5px solid @nav-active;
+      width: 5%;
+    }
+    &.info-cell {
       padding: 2px 2px 2px 5px;
       text-align: left;
       color: black;
+      row-span: 2;
+      width: 95%;
     }
     &.space-cell {
-      padding: 2px;
+      padding: 4px;
       //text-align: left;
       background: white;
     }
