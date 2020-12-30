@@ -1,0 +1,17 @@
+extends ../_templates/_layouts/default.pug
+
+block vars
+  - title = 'Ali Jahan · News'
+  - navPage = 'news'
+  include ../params/news
+
+block content
+  #blog
+    h1 News
+    table
+      each news_ in news
+        tr
+          td(class='date-cell')= news_.date
+          td(class='info-cell')= news_.title
+        tr
+          td(class='space-cell')

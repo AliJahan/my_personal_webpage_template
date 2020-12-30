@@ -1,80 +1,57 @@
 extends ./_templates/_layouts/default.pug
 
 
+block vars
+  include params/posts
+  include params/news
+  include params/papers
+  include params/reviews
+
 block content
   #home
-    //h1 #[img.me(src="/~ajaha004/files/pic.jpg")]
-    //p I'm a research assistant at University of California, Riverside. I joined #[a(href='http://www.danielwong.org/socal.html') SoCal] in Fall 2017.
     h2 About me
-    P I am a PhD student under the supervision of Dr. Daniel Wong, in the CSE department at University of California, Riverside (UCR).
-    P I work on the intersection of machine learning systems and energy-efficient computing. I have extensive experience in designing software and hardware systems for machine learning applications in diverse computational environments, ranging from embedded systems (FPGA/Raspberry Pi) to multi-GPU systems and data centers. Currently, I am exploring system and architectural limitations of autonomous vehicle's software pipeline, and challenges in integrating edge computing devices in autonomous vehicles.
-    P Recent highlights include:
-    ul
-      li
-        p #[strong ML Accelerators:] developed accelerated deep learning solutions in embedded resource-constrained environments.
-      li 
-        p #[strong Systems for ML:] profiling and evaluating bottlenecks and energy-efficiency of multi-GPU ML systems in the production pipeline.
-      li
-        p #[strong ML for Systems:] reinforcement learning-based power and resource management for co-located cloud and ML workloads.
+    include params/aboutme
     fhr
     /////////////////////////////////////////////////////////////////////////////
-    h2 News
+    h2 Recent news
     table
-      tr
-        td(class='date-cell') Dec. 2020
-        td(class='info-cell') I will be joining #[a(href="https://motional.com/") Motional] as Software Engineer Intern (World Simulation), in Winter'21.
-      tr
-        td(class='space-cell')
-        //td(class='space-cell')
-      tr
-        td(class='date-cell') Sep. 2020
-        td(class='info-cell') Our paper, "#[strong GPU-NEST: Characterizing Energy Efficiency of Multi-GPU Inference Servers]" has been accepted in IEEE Computer Architecture Letters (Volume: 19, Issue: 2, July-Dec. 1 2020).
+      each news_, index in news
+        if index < newsHighlights
+          tr
+            td(class='date-cell')= news_.date
+            td(class='info-cell')= news_.title
+          tr
+            td(class='space-cell')
+    xx-small Read more in #[a(href='/~ajaha004/news/') news] (total: #{news.length}).
     fhr
     /////////////////////////////////////////////////////////////////////////////
-    h2 Blog Posts
+    h2 Recent blog posts
     table
-      tr
-        td(class='date-cell') Dec. 2020
-        td(class='info-cell') ROCm
-      tr
-        td(class='space-cell')
-        td(class='space-cell')
-      tr
-        td(class='date-cell') Oct. 2020
-        td(class='info-cell') PyTorch
+      each post, index in posts
+        if index < blogPostHighlights
+          tr
+            td(class='post-cell')= post.title
+          tr
+            td(class='space-cell')
+    xx-small Read more in #[a(href='/~ajaha004/blog/') my blog] (published: #{posts.length}).
     fhr
     /////////////////////////////////////////////////////////////////////////////
     h2 Papers
     table
-      tr
-        td(class='date-cell') CAL
-        td(class='info-cell') #[strong A. Jahanshahi], H. Z. Sabzi, C. Lau and D. Wong, #[strong "GPU-NEST: Characterizing Energy Efficiency of Multi-GPU Inference Servers,"] in IEEE Computer Architecture Letters, vol. 19, no. 2, pp. 139-142, 1 July-Dec. 2020, doi: 10.1109/LCA.2020.3023723.
-        td(class='link-cell') #[a(href="/~ajaha004/files/GPU-NEST.pdf") PDF]
-      tr
-        td(class='space-cell')
-        //td(class='space-cell')
-      tr
-        td(class='date-cell') Big Data
-        td(class='info-cell') M. Karimi, #[strong A. Jahanshahi], A. Mazloumi and H. Z. Sabzi, #[strong "Border Gateway Protocol Anomaly Detection Using Neural Network,"] in IEEE International Conference on Big Data (Big Data), Los Angeles, CA, USA, 2019, pp. 6092-6094, doi: 10.1109/BigData47090.2019.9006201.
-        td(class='link-cell') #[a(href="/~ajaha004/files/BGP.pdf") PDF]
-      tr
-        td(class='space-cell')
-        //td(class='space-cell')
-      tr
-        td(class='date-cell') CADS
-        td(class='info-cell') #[strong A. Jahanshahi], M. K. Taram and N. Eskandari, #[strong "Blokus Duo Game on FPGA,"] The 17th CSI Int. Symp. Computer Architecture & Digital Systems (CADS 2013), Tehran, 2013, pp. 149–152, doi: 10.1109/CADS.2013.6714256.
-        td(class='link-cell') #[a(href="/~ajaha004/files/Blokus.pdf") PDF]
-      tr
-        td(class='space-cell')
-        //td(class='space-cell')
+      each paper in papers
+        tr
+          td(class='venue-cell')=paper.venue
+          td(class='info-cell')=paper.info
+          td(class='link-cell')
+            a(href=paper.link) PDF
+        tr
+          td(class='space-cell')
     fhr
     ///////////////////////////////////////////////////////////////////////////////
-    h2 Contact Info
-    ul.contact
-      //li
-      //  strong Email: (pagetitle)91(aT)gmail(dOt)com
-      li
-        strong GitHub: #[a(href='https://github.com/alijahan') github.com/alijahan]
-      li
-        strong LinkedIn: #[a(href='https://www.linkedin.com/in/alijahanshahi') linkedin.com/in/alijahanshahi]
+    h2 Professional Activities
+    h3 External Review Committee
+      ul
+        for reviewer in venues
+          li
+            small= reviewer
 

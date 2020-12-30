@@ -17,8 +17,10 @@
   .contact {
     list-style: none;
   }
-
-  td {;
+  xx-small {
+    background: lighten(@nav-hover, 25%);
+  }
+  td {
     &.date-cell {
       width: 60px;
       height: 40px;
@@ -29,6 +31,28 @@
       border: .5px solid @nav-active;
       border-left: 5px solid @nav-hover;
       border-right: 5px solid @nav-hover;
+      width: 5%;
+    }
+    &.venue-cell {
+      width: 60px;
+      height: 40px;
+      padding: 2px;
+      text-align: center;
+      background: @nav-active;
+      color: white;
+      border: .5px solid @nav-active;
+      border-left: 5px solid @nav-hover;
+      border-right: 5px solid @nav-hover;
+      width: 5%;
+    }
+    &.post-cell {
+      width: 60px;
+      height: 40px;
+      padding: 5px;
+      text-align: left;
+      color: black;
+      border-left: 5px solid @nav-hover;
+
       width: 5%;
     }
     &.link-cell {
