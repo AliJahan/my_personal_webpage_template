@@ -8,9 +8,15 @@ block vars
 block content
   #blog
     h1 Blog
-    each post in posts
-      .post
-        h2
-          a(href='/~ajaha004/blog/' + post.path)= post.title
-          small= post.date
-        p!= post.tldr
+    .post
+    h2
+    table
+      each post, index in posts
+          tr
+            td(class='post-cell')
+              a(href='/~ajaha004/blog/' + post.path)= post.title
+              small= ", "+post.date
+              br
+              small= post.tldr
+          tr
+            td(class='space-cell')

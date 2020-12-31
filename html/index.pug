@@ -22,7 +22,7 @@ block content
             td(class='info-cell')= news_.title
           tr
             td(class='space-cell')
-    xx-small Read more in #[a(href='/~ajaha004/news/') news] (total: #{news.length}).
+    xx-small More in the #[a(href='/~ajaha004/news/') news] feed (total: #{news.length}).
     fhr
     /////////////////////////////////////////////////////////////////////////////
     h2 Recent blog posts
@@ -33,7 +33,7 @@ block content
             td(class='post-cell')= post.title
           tr
             td(class='space-cell')
-    xx-small Read more in #[a(href='/~ajaha004/blog/') my blog] (published: #{posts.length}).
+    xx-small More in the #[a(href='/~ajaha004/blog/') blog] (published: #{posts.length}).
     fhr
     /////////////////////////////////////////////////////////////////////////////
     h2 Papers
@@ -54,4 +54,3 @@ block content
         for reviewer in venues
           li
             small= reviewer
-
