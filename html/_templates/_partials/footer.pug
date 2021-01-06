@@ -2,15 +2,13 @@
   div.container
     div.row
       div.col-xs-6.left
-        p
-          a(href='https://github.com/AliJahan')
-            svg.icon
-              use(xlink:href='/~ajaha004/icons.svg#icon-github-alt')
-          a(href='https://www.linkedin.com/in/alijahanshahi/')
-            svg.icon
-              use(xlink:href='/~ajaha004/icons.svg#icon-linkedin')
-//      div.col-xs-6.right
-//        p
-//		| View source code
-//          a(href='https://github.com/scott113341/website')
-
+        if linkedinEnable || githubEnable
+          p
+            if githubEnable
+              a(href=githubURL)
+                svg.icon
+                  use(xlink:href='/' + baseURL + '/icons.svg#icon-github-alt')
+            if linkedinEnable
+              a(href=linkedinURL)
+                svg.icon
+                  use(xlink:href='/' + baseURL + '/icons.svg#icon-linkedin')

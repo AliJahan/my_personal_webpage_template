@@ -1,5 +1,6 @@
+include ../../params/params
 block default-vars
-  - title = 'Ali Jahanshahi'
+  - title = websiteLongTitle
   - navPage = 'home'
 block vars
 
@@ -15,7 +16,7 @@ html(lang='en')
       meta(name='google-site-verification', content='EHkUAAPr6Gml10wBbmwxjQEFwMrI08RVUpnOcpM1s_U')
 
       link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Lato:100italic,100,300italic,300,400italic,400,700italic,700,900italic,900|Montserrat:400,700')
-      link(rel='stylesheet', href='/~ajaha004/app.css')
+      link(rel='stylesheet', href='/' + baseURL + '/app.css')
 
   body
     include ../_partials/header.pug

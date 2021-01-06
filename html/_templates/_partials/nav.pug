@@ -1,23 +1,30 @@
 - a = 'active'
 
 ul#nav.no-print
-  img(src="/~ajaha004/files/pic.jpg")
+  img(src=pictureURL)
+
   li(class=(navPage === 'home' ? a : ''))
-    a(href='/~ajaha004/') Home
-  li(class=(navPage === 'blog' ? a : ''))
-    a(href='/~ajaha004/blog') Blog
-  li(class=(navPage === 'news' ? a : ''))
-    a(href='/~ajaha004/news') News
-  li(class=(navPage === 'projects' ? a : ''))
-    a(href='/~ajaha004/projects') Projects
+    a(href='/' + baseURL + '/') Home
+  if enableBlog
+    li(class=(navPage === 'blog' ? a : ''))
+      a(href='/' + baseURL + '/blog') Blog
+  if enableNewsMenu
+    li(class=(navPage === 'news' ? a : ''))
+      a(href='/' + baseURL + '/news') News
+  if enableProjectsMenu
+    li(class=(navPage === 'projects' ? a : ''))
+      a(href='/' + baseURL + '/projects') Projects
   hr
-  li(class=('info'))
-    a(href='https://github.com/AliJahan')
-      svg.icon
-        use(xlink:href='/~ajaha004/icons.svg#icon-github-alt')
-    a(href='https://www.linkedin.com/in/alijahanshahi/')
-      svg.icon
-        use(xlink:href='/~ajaha004/icons.svg#icon-linkedin')
-    br
-    br
+  if linkedinEnable || githubEnable
+    li(class=('info'))
+      if githubEnable
+        a(href=githubURL)
+          svg.icon
+            use(xlink:href='/' + baseURL + '/icons.svg#icon-github-alt')
+      if linkedinEnable
+        a(href=linkedinURL)
+          svg.icon
+            use(xlink:href='/' + baseURL + '/icons.svg#icon-linkedin')
+      br
+      br
   //fhr

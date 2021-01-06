@@ -13,28 +13,31 @@ block content
     include params/aboutme
     fhr
     /////////////////////////////////////////////////////////////////////////////
-    h2 Recent news
-    table
-      each news_, index in news
-        if index < newsHighlights
-          tr
-            td(class='date-cell')= news_.date
-            td(class='info-cell')= news_.title
-          tr
-            td(class='space-cell')
-    xx-small More in the #[a(href='/~ajaha004/news/') news] feed (total: #{news.length}).
-    fhr
+    if enableHomePageNews
+      h2 Recent news
+      table
+        each news_, index in news
+          if enableNewsMenu==false || index < newsHighlights
+            tr
+              td(class='date-cell')= news_.date
+              td(class='info-cell')= news_.title
+            tr
+              td(class='space-cell')
+      if enableNewsMenu
+        xx-small More in the #[a(href='/'+baseURL+'/news/') news] (total: #{news.length}).
+      fhr
     /////////////////////////////////////////////////////////////////////////////
-    h2 Recent blog posts
-    table
-      each post, index in posts
-        if index < blogPostHighlights
-          tr
-            td(class='post-cell')= post.title
-          tr
-            td(class='space-cell')
-    xx-small More in the #[a(href='/~ajaha004/blog/') blog] (published: #{posts.length}).
-    fhr
+    if enableBlog
+      h2 Recent blog posts
+      table
+        each post, index in posts
+          if index < blogPostHighlights
+            tr
+              td(class='post-cell')= post.title
+            tr
+              td(class='space-cell')
+      xx-small More in the #[a(href='/'+baseURL+'/blog/') blog] (published: #{posts.length}).
+      fhr
     /////////////////////////////////////////////////////////////////////////////
     h2 Papers
     table

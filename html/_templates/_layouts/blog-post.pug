@@ -1,8 +1,7 @@
 extends ./default.pug
 
-
 block vars
-  - title = 'Ali Jahan · Blog'
+  - title = websiteShortTitle + ' · Blog'
   - navPage = 'blog'
 
 
@@ -13,7 +12,7 @@ block content
     .row
       .col-sm-8
         p
-          a(href='/~ajaha004/blog') Back to blog
+          a(href='/' + baseURL + '/blog') Back to blog
 
         h1= postTitle
         h4= postDate
