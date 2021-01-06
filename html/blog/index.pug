@@ -1,7 +1,7 @@
 extends ../_templates/_layouts/default.pug
 
 block vars
-  - title = 'Ali Jahan · Blog'
+  - title = websiteShortTitle + ' · Blog'
   - navPage = 'blog'
   include ../params/posts
 
@@ -14,7 +14,7 @@ block content
       each post, index in posts
           tr
             td(class='post-cell')
-              a(href='/~ajaha004/blog/' + post.path)= post.title
+              a(href='/'+ baseURL +'/blog/' + post.path)= post.title
               small= ", "+post.date
               br
               small= post.tldr
